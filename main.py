@@ -27,6 +27,8 @@ def main():
             ("NLP",
              "Recommender systems",
              "Logistic optimisation",
+             "Power BI",
+             "SQL"
              )
             )
 
@@ -36,7 +38,15 @@ def main():
             st.info('''Natural Language Processing is taking the data science world by storm.
                     Analysing language can provide valuable business market value and Africa can
                     benefit from research in NLP to improve education.''')
-            st.checkbox('Climate change tweet classifier')
+            checked = st.checkbox('Climate change tweet classifier')
+            if checked:
+                st.write('''The climate change tweet classifier can take any text as input and 
+                        classify if the text has a sentiment of either
+                        \n * Pro Climate change
+                        \n * Anti Climate change
+                        \n * Neutral towards Climate change
+                        \n * News tweets''')
+                st.info('Follow the project here:')
             st.checkbox('Vaccine tweet classifier')
 
         if option == "Recommender systems":
